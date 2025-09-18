@@ -1,26 +1,31 @@
-* {
-    box-sizing: border-box;
+/* borders and padding to fix your measurements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-img {
-    object-fit: cover;
-    width: 300px;
-    height: 300px;
+html, body {
+  /*background: #E8E8E8;*/
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.vision-board-title {
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .vision-board-title h1 {
-    text-align: center;
+    margin: 0;
+    font-size: 36px;
 }
 
-body {
-  /*background: #E8E8E8;*/
-  color: #3B3B3B;
-}
+/* Grid container */
 
-#vision-board {
-    height: 850px;
-    width: 1200px;
-    margin: 50px auto;
+.vision-board-grid {
     overflow: auto;
     background: url('img/mars-plex-knH05eGDEwc-unsplash.jpg');
     background-size: cover;
@@ -29,6 +34,64 @@ body {
     text-transform: uppercase;
 }
 
-.block {
-    outline:
+#vision-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* adjust # of columns */
+    gap: 20px;             /* space between blocks */
+    height: 850px;
+    width: 1200px;
+    margin: 0 auto;        /* center page */
+    padding: 20px;         /* space between page edge and grid */
+    grid-auto-rows: 240px; /* base row height - adjust */
+    align-items: start;    /* keep content at top of each cell */
 }
+
+/* make your "large-block" span two rows so it becomes taller like in screenshot */
+.block.large-block {
+  grid-row: span 2;
+}
+
+/* small blocks span a single row (explicit but optional) */
+.block.small-block {
+  grid-row: span 1;
+}
+
+.block {
+    border: 2px solid #ffffff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.block img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0; /* remove default inline spacing */
+}
+
+.small-block {
+    height: 225px;
+}
+
+.large-block {
+    height: 400px;
+}
+
+.block .center {
+    align-items: center;
+    text-align: center;
+}
+
+.block .right {
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* text tweaks */
+.block p { margin: 0 0 12px 0; line-height: 1.25; }
+.highlight { font-weight: 700; }
+
