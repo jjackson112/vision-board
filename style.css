@@ -13,6 +13,7 @@ html, body {
   padding: 0;
   color: #000000;
   overflow-x: hidden; /* stops horizontal scroll */
+  padding-bottom: 30px;
 }
 
 .vision-board-title {
