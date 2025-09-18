@@ -97,5 +97,14 @@ html, body {
 }
 
 /* text tweaks */
-.block p { margin: 0 0 12px 0; line-height: 1.25; }
-.highlight { font-weight: 700; }
+.block p { 
+    margin: 0 0 12px 0; 
+    line-height: 1.25; 
+}
+
+.highlight { 
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 5px;
+    color: coral;
+    font-weight: 700; 
+}
