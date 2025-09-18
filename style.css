@@ -7,3 +7,28 @@ img {
     width: 300px;
     height: 300px;
 }
+
+.vision-board-title h1 {
+    text-align: center;
+}
+
+body {
+  /*background: #E8E8E8;*/
+  color: #3B3B3B;
+}
+
+#vision-board {
+    height: 850px;
+    width: 1200px;
+    margin: 50px auto;
+    overflow: auto;
+    background: url('img/mars-plex-knH05eGDEwc-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.block {
+    outline:
+}
