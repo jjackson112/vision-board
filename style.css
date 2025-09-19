@@ -28,16 +28,18 @@ html, body {
 
 /* Grid container */
 
+/*
 .vision-board-grid {
     overflow: auto;
-    background: url('img/mars-plex-knH05eGDEwc-unsplash.jpg');
+    background: url('img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
+*/
 
-#vision-board {
+.vision-board-grid {
+    background: url("img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg") no-repeat fixed center;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* adjust # of columns */
     gap: 20px;             /* space between blocks */
@@ -48,6 +50,8 @@ html, body {
     padding: 20px;         /* space between page edge and grid */
     grid-auto-rows: 240px; /* base row height - adjust */
     align-items: start;    /* keep content at top of each cell */
+    text-transform: uppercase;
+    overflow: auto;
 }
 
 /* make your "large-block" span two rows so it becomes taller like in screenshot */
@@ -72,7 +76,7 @@ html, body {
 
 .block img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
